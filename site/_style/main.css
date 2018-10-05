@@ -1,0 +1,150 @@
+/* CSS Document */
+
+/* GENERAL */
+
+.hidden {display:none;}
+
+/* FONTS */
+
+h1 { font-size:	197%; } /*renders 26px */
+h2 { font-size:	153.9%; } /*renders 20px */ 
+h3 { font-size:	123.1%; font-weight:bold;} /*renders 16px, bold */ 
+h4 { font-size:	123.1%; } /*renders 16px */ 
+h5 { font-size:	100%; font-weight:bold;} /*renders 13px, bold */ 
+h6 { font-size:	100%; } /*renders 13px */
+p { margin-top:5px; }
+/* PAGE */
+
+#doc4 {border:1px solid #000000;}
+
+/* HEADER */
+
+#hd {background:#034E7D url('http://www.rubbergoldfish.co.uk/palsoc/_img/pageSet/header.png') no-repeat right;margin-bottom:10px;border-bottom:1px solid rgb(0,0,0);padding:10px; }
+#hd h1 {color:rgb(255,255,255);font-family:times}
+
+/* NAVIGATION */
+
+#navigation {padding-left:10px;padding-right:5px;}
+
+/* MAIN */
+
+#main {padding-left:5px;padding-right:10px;}
+
+/* FOOTER */
+
+#ft {background:rgb(0,0,0);border-top:1px solid rgb(0,0,0);margin-top:10px;padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;color:rgb(255,255,255);}
+
+/* HOME MOD */
+
+#homeTemplateNormal {border:2px solid rgb(0,153,0);margin-bottom:10px;text-align:center;background:rgb(255,255,204);}
+#homeTemplateImportant {border:2px solid rgb(255,153,0);margin-bottom:10px;text-align:center;background:rgb(255,255,204);}
+#homeTemplateWarning {border:2px solid rgb(255,51,0);margin-bottom:10px;text-align:center;background:rgb(255,255,204);}
+
+#homeTemplateStyle1 {}
+#homeTemplateIntro {margin-bottom:10px;border-bottom:1px dashed rgb(0,0,0);padding-bottom:5px;}
+#homeTemplateCols {margin-bottom:10px;border-bottom:1px dashed rgb(0,0,0);padding-bottom:5px;}
+#homeTemplateCols img {border:1px solid rgb(0,0,0);}
+#homeTemplateLinks {padding-bottom:5px;}
+#homeTemplateLinksCols {margin-top:5px;}
+
+
+/* MENU */
+
+.menu{
+	width: 180px;
+}
+
+.menu ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/*Top level list items*/
+.menu ul li{
+  position: relative;
+  display: inline;
+  float: left;
+  /*background:rgb(224,224,224) url(http://www.rubbergoldfish.co.uk/palsoc/_img/pageSet/menuBackground.png) 0 bottom;*/
+
+  color: rgb(255,255,255);
+}
+
+/*Top level menu link items style*/
+.menu ul li a{
+	display: block; /*background of tabs (default state)*/
+	padding:2px 8px 2px 8px;
+	margin:0;
+	color: #426BA4;
+	text-decoration: none;
+	width:164px;   /*  180px - 8px - 8px = 75; */  
+	/*background-color: #456593;*/
+	border-bottom:1px solid rgb(255,255,255);
+	background:#034E7D;
+}
+
+* html .menu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+  display: inline-block;
+}
+
+.menu ul li a:link, .menu ul li a:visited{
+  color: rgb(255,255,255);
+}
+
+.menu ul li a:hover{
+  /*background:rgb(102,102,204) url(http://www.rubbergoldfish.co.uk/palsoc/_img/pageSet/menuBackground.png) 0 bottom;*/
+  background:#6D97B3;
+  color: rgb(255,255,255);
+  font-weight:bold;
+}
+	
+/*1st sub level menu*/
+.menu ul li ul{
+  position: absolute;
+  left: 0;
+  display: block;
+  visibility: hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.menu ul li ul li{
+  display: list-item;
+  float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.menu ul li ul li ul{
+  top: 0;
+}
+
+/* Sub level menu links style */
+.menu ul li ul li a{
+  width: 180px; /*width of sub menus*/
+  padding:2px 8px 2px 8px;
+	margin:0;
+  margin: 0;
+  border-top-width: 0;
+  border-left:1px solid rgb(255,255,255);
+
+}
+
+.menuz ul li ul li a:hover{ /*sub menus hover style*/
+  background: #eff9ff;
+  color: black;
+}
+
+.downarrowclass{
+  position: absolute;
+  top: 8px;
+  right: 7px;
+}
+
+.rightarrowclass{
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  border:0;
+  width:6px;
+  height:6px;
+}
+
