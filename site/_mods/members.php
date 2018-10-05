@@ -177,4 +177,3 @@ if ($MEMBERVERIFIED) {
     break;
   }
 }
-?>

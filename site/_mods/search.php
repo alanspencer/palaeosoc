@@ -1310,4 +1310,3 @@ switch ($_GET['view']) {
   break;
 }
 $main->_div();
-?>
