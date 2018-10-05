@@ -1,0 +1,35 @@
+RewriteEngine on
+
+RewriteBase   /site
+
+# redirect
+RewriteRule ^download/([a-zA-Z0-9-_./*]+)$ _down/$1  [QSA] [NC,L]
+RewriteRule ^image/([a-zA-Z0-9-_./*]+)$ _img/$1  [QSA] [NC,L]
+RewriteRule ^css/([a-zA-Z0-9-_./*]+)$ _style/$1  [QSA] [NC,L]
+RewriteRule ^404/$ index.php?process=404  [QSA] [NC,L]
+
+#search
+RewriteRule ^search/?$ index.php?module=search  [QSA] [NC,L]
+
+# admin page
+RewriteRule ^admin/?$ index.php?module=admin  [QSA] [NC,L]
+
+# home page
+RewriteRule ^home/?$ index.php?module=home  [QSA] [NC,L]
+
+# pages
+RewriteRule ^page/?$ index.php?process=404  [QSA] [NC,L]
+RewriteRule ^page/([a-zA-Z0-9-]+)/?$ index.php?module=page&pageSection=$1  [QSA] [NC,L]
+RewriteRule ^page/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ index.php?module=page&pageSection=$1&pageName=$2  [QSA] [NC,L]
+
+# shop
+RewriteRule ^shop/?$ index.php?module=shop  [QSA] [NC,L]
+RewriteRule ^shop/home/?$ index.php?module=shop  [QSA] [NC,L]
+RewriteRule ^shop/monographs/?$ index.php?module=shop&shopSection=monographs  [QSA] [NC,L]
+RewriteRule ^shop/monographs/issue:([0-9]+)/?$ index.php?module=shop&shopSection=monographs&issue=$1  [QSA] [NC,L]
+
+#members
+RewriteRule ^members/?$ index.php?module=members  [QSA] [NC,L]
+RewriteRule ^members/account/?$ index.php?module=members  [QSA] [NC,L]
+RewriteRule ^members/join/?$ index.php?module=members&mode=join  [QSA] [NC,L]
+RewriteRule ^members/renew/?$ index.php?module=members&mode=renew  [QSA] [NC,L]
