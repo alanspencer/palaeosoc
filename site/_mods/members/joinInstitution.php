@@ -236,4 +236,3 @@ $main->div ('membersJoinInstitutionPage','');
     $main->_form();
   }
 $main->_div();
-?>

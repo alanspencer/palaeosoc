@@ -226,4 +226,3 @@ if (($num_order==0) OR ($row_order['mod_shop_orders_MemberID']!=$_SESSION['MEMBE
     
   $main->_div();
 }
-?>

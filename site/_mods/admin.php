@@ -137,7 +137,8 @@ if ($ADMINVERIFIED) {
         break;
       }
     break;
-    
+
+      /*
     case "shop":
       switch ($_GET['view']) {
         case 'uploadMonographs':
@@ -181,7 +182,8 @@ if ($ADMINVERIFIED) {
         break;
       }
     break;
-    
+    */
+
     case "members":
       switch ($_GET['view']) {
         case 'membersConfig':
@@ -245,4 +247,3 @@ if ($ADMINVERIFIED) {
   // Get Login Page
   include(dirname(__FILE__).'/admin/login.php');
 }
-?>

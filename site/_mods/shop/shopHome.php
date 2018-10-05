@@ -234,4 +234,3 @@ switch (shopConfig('TEMPLATE_STYLE', $db)) {
   break;
 }
 $main->_div();
-?>

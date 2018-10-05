@@ -195,7 +195,6 @@ switch ($_GET['view']) {
     $main->div('searchAdvancedTabs',''); 
     $main->add('<ul>
     <li><a href="#searchPageFormTab">Webpage Search</a></li>
-    <li><a href="#searchShopFormTab">Monograph Search</a></li>
     </ul>');
 
     $main->div('searchPageFormTab','');
@@ -236,6 +235,7 @@ switch ($_GET['view']) {
       $main->_div();
       $main->_form();
     $main->_div();
+    /*
     $main->div('searchShopFormTab','');
       $main->hx(3,'Monograph Search','','');$main->_hx(3);
       $main->add('<form action="'.__SITEURL.'search/" method="GET" id="searchFormShop">');
@@ -307,7 +307,7 @@ switch ($_GET['view']) {
       $main->add('Enter first page/last number of article. Due to the various pagination methods used over the years we do not recommend using this as part of the search.');
       $main->_td();
       $main->_tr();
-      /*
+
       $main->tr('','');
       $main->td('','','','');$main->add('Compressed:');$main->_td();
       $main->td('','','','');
@@ -319,13 +319,14 @@ switch ($_GET['view']) {
       $main->add(' Check if you want compressed output (each result only show minimal information)');
       $main->_td();
       $main->_tr();
-      */
+
       $main->_tbody();
       $main->_table();
       $main->div('','buttonWrapper');
         $main->input('submit', '', 'Search Monographs (Shop)', '', '', '', '', '');
       $main->_div();
       $main->_form();
+      */
     $main->_div();
     // End Tabs
     $main->_div(); 
@@ -356,7 +357,8 @@ switch ($_GET['view']) {
           $main->hx(2,'Webpage Search (Advanced) - Results','','');$main->_hx(2);
           $main->add('The search you have just performed looks through the PalaeoSoc webpages.<br /><br />');
         break;
-        
+
+        /*
         case "monographs":
         case "advShop":
           $main->div ('pageRetrunLinksTop','');
@@ -367,6 +369,7 @@ switch ($_GET['view']) {
           $main->hx(2,'Monograph Search - Results','','');$main->_hx(2);
           $main->add('The search you have just performed looks through the PalaeoSoc Online Shop monograph database.<br /><br />');
         break;
+         */
       }
     $main->_div();
     
@@ -786,7 +789,8 @@ switch ($_GET['view']) {
         // End Tabs
         $main->_div();
       break;
-      
+
+      /*
       case "monographs":
       case "advShop":
         isset($_GET['issue']) ? $p_issue = $_GET['issue'] : $p_issue = NULL;
@@ -901,7 +905,6 @@ switch ($_GET['view']) {
         $main->add('Enter first/last page number of article. Due to the various pagination methods used over the years we do not recommend using this as part of the search.');
         $main->_td();
         $main->_tr();
-        /*
         $main->tr('','');
         $main->td('','','','');$main->add('Compressed:');$main->_td();
         $main->td('','','','');
@@ -913,7 +916,6 @@ switch ($_GET['view']) {
         $main->add(' Check if you want compressed output (each result only show minimal information)');
         $main->_td();
         $main->_tr();
-        */
         $main->_tbody();
         $main->_table();
         $main->div('','buttonWrapper');
@@ -1303,6 +1305,7 @@ switch ($_GET['view']) {
       // End Tabs
       $main->_div();
       break;
+      */
     }
   break;
 }

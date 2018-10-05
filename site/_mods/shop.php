@@ -1,7 +1,7 @@
 <?php
 // Get Config for module
 
-function shopConfig ($VAR, $db) { 
+function shopConfig ($VAR, $db) {
 	$sql_file_config = "SELECT * FROM mod_shop_config WHERE mod_shop_config_Var='$VAR'";
   $result_file_config = $db->sql_query($sql_file_config);
   $row_file_config_num = $db->sql_numrows($result_file_config); 
@@ -12,6 +12,7 @@ function shopConfig ($VAR, $db) {
     return false;
   }
 }
+
 
 $STYLE_COLOR = shopConfig('STYLE_COLOR', $db);
 if ($STYLE_COLOR == 'Random') {
@@ -33,7 +34,7 @@ if ($STYLE_COLOR == 'Random') {
 }
 
 $main = new xhtml;
-
+/*
 if (isset($_GET['view'])) {
   $VIEW = $_GET['view'];
   switch ($VIEW) {
@@ -71,6 +72,22 @@ if (isset($_GET['view'])) {
     break;  
   }
 }
+*/
 
+$pageTitle = ' - '.shopConfig('PAGE_TITLE', $db);
 
-?>
+$main->div ('pageRetrunLinksTop','');
+$main->add('<a href="'.__SITEURL.'home/" title="Return to Home Page">Home Page</a>');
+$main->_div();
+
+$main->div('shopTemplateStyle1','');
+
+$main->div('homeTemplateImportant','');
+$main->div('','title');
+$main->hx(2,'Important - Shop Closed','','');$main->_hx(2);
+$main->_div();
+$main->add('The monographs of the Palaeontographical Society can now be found and bought from <a href="https://www.tandfonline.com/tmps20" target="_blank">Taylor and Francis</a>.');
+$main->_div();
+
+$main->_div();
+$main->_div();
