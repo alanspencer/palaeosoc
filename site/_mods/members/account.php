@@ -1,5 +1,10 @@
 <?php
 
+if (!$MEMBERVERIFIED) {
+    header('Location: https://www.palaeosoc.org');
+    exit();
+}
+
 function date_membership_remaining_days($date)
 {
     $date = '31 December ' . $date;
@@ -65,7 +70,7 @@ $endTime = strtotime('31 December ' . $row_members['mod_members_users_SubYear'])
 $now = time();
 $timeleft = $endTime - $now;
 $daysleft = round((($timeleft / 24) / 60) / 60);
-$main->add('Your current subscription is valid untill: <strong>31<sup>st</sup> December ' . $row_members['mod_members_users_SubYear'] . ' | ' . date_membership_remaining_days($row_members['mod_members_users_SubYear']) . '</strong>');
+$main->add('Your current subscription is valid until: <strong>31<sup>st</sup> December ' . $row_members['mod_members_users_SubYear'] . ' | ' . date_membership_remaining_days($row_members['mod_members_users_SubYear']) . '</strong>');
 $main->_p();
 
 $main->hx(3, 'Options', '', '');
@@ -141,8 +146,13 @@ if ($db->sql_numrows($result_orders) != 0) {
 }
 $main->_ul();
 */
-$main->_div();
-$main->_div();
-$main->_div();
 
-?>
+$main->hx(4, 'Taylor &amp; Francis Online', '', '');
+$main->_hx(4);
+$main->ul('', '');
+$main->li('<a href="?mode=tandf&amp;tps=access" target="_blank">Access Online Monographs</a><br />(link opens external website)', '', '');
+$main->_li();
+$main->_ul();
+$main->_div();
+$main->_div();
+$main->_div();
