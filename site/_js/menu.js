@@ -5,7 +5,7 @@
 *********************/
 
 //Specify full URL to down and right arrow images (23 is padding-right to add to top level LIs with drop downs):
-var arrowimages={down:['downarrowclass', 'http://www.palaeosoc.org/site/_img/pageSet/images/down.png', 23], right:['rightarrowclass', 'http://www.palaeosoc.org/site/_img/pageSet/rightArrowWhite.png']}
+var arrowimages={down:['downarrowclass', 'https://www.palaeosoc.org/site/_img/pageSet/images/down.png', 23], right:['rightarrowclass', 'https://www.palaeosoc.org/site/_img/pageSet/rightArrowWhite.png']}
 
 var jqueryslidemenu={
 

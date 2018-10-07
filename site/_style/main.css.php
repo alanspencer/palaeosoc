@@ -2,9 +2,10 @@
 header('Content-type: text/css'); 
 
 // Get Site URL
-define ('__SITEURI','site/');
-define ('__HOST',$_SERVER['HTTP_HOST'].'/');
-define ('__SITEURL', strtolower  (substr($_SERVER['SERVER_PROTOCOL'],0,strpos($_SERVER['SERVER_PROTOCOL'],'/'))).'://'.__HOST.__SITEURI);
+define('__SITEURI', 'site/');
+define('__HOST', $_SERVER['HTTP_HOST'] . '/');
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+define('__SITEURL', $protocol . __HOST . __SITEURI);
 
 // Default Page Color
 
